@@ -1,0 +1,7 @@
+<%# <h1>WELCOME TO THE COUPONS SITE</h1>
+<h2>These are all the coupons we have right now!</h2> %>
+
+<% @coupons.each do |coupon| %>
+  <h3><%= link_to coupon.coupon_code, coupon_path(coupon) %></h3><br>
+  <h2><%= coupon.store %></h2>
+<% end %>
